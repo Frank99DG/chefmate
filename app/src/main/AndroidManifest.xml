@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ChefMate"
         tools:targetApi="31">
         <activity
+            android:name=".prova"
+            android:exported="false" />
+        <activity
+            android:name=".PrimoQuestionario"
+            android:exported="false" />
+        <activity
             android:name=".PrimaVoltaApp"
             android:exported="false" />
         <activity
