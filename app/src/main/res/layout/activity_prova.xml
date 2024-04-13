@@ -1,51 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".StepActivity">
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-    <!-- Cerchio 1 -->
-    <ImageView
-        android:id="@+id/circle1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/circle_background"
-        android:src="@mipmap/ic_circle_empty"
-        android:contentDescription="@string/circle1"/>
-
-    <!-- Cerchio 2 -->
-    <ImageView
-        android:id="@+id/circle2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/circle_background"
-        android:src="@mipmap/ic_circle_empty"
-        android:contentDescription="@string/circle2"/>
-
-    <!-- Cerchio 3 -->
-    <ImageView
-        android:id="@+id/circle3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
+<!-- Circle and Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/background_app"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/circle_background"
-        android:src="@mipmap/ic_circle_empty"
-        android:contentDescription="@string/circle3"/>
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/next_button"
-        android:layout_width="wrap_content"
+        <!-- Circle and TextView Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+            <!-- Circle -->
+            <ImageView
+                android:id="@+id/filledCircle"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="26dp"
+                android:src="@drawable/ic_circle_new" />
+
+            <TextView
+                android:id="@+id/circleTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 di 3"
+                android:textSize="16sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="48dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+            <!-- TextView -->
+            <TextView
+                android:id="@+id/circleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PATOLOGIE"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:id="@+id/circleTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prossimo:Allergie"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="80dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!-- Rest of the Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Avanti"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/circle1"
-        android:layout_marginTop="50dp"/>
+        android:orientation="vertical">
+
+        <!-- Place your other content here -->
+
+    </LinearLayout>
 
 </RelativeLayout>

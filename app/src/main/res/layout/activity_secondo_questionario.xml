@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/secondo_questionario"
+android:background="@color/background_app"
+android:padding="30dp"
+tools:context=".SecondoQuestionario">
+
+<!-- Cerchio 1 -->
+<Button
+    android:id="@+id/circle1_sec"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/circle_background"
+    android:gravity="center"
+    android:text="@string/circle1"
+    android:textColor="@android:color/black"
+    android:textSize="16sp"
+    android:textStyle="bold"/>
+
+<Button
+    android:id="@+id/circle2_sec"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/circle_background"
+    android:gravity="center"
+    android:text="@string/circle2"
+    android:textColor="@android:color/black"
+    android:textSize="16sp"
+    android:textStyle="bold"/>
+
+<!-- Cerchio 3 -->
+<Button
+    android:id="@+id/circle3_sec"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_alignParentEnd="true"
+    android:background="@drawable/circle_background"
+    android:gravity="center"
+    android:text="@string/circle3"
+    android:textColor="@android:color/black"
+    android:textSize="16sp"
+    android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/domanda2"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circle2_sec"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:text="@string/intolleranze"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+    android:id="@+id/risposte_domanda_2"
+    android:layout_width="380dp"
+    android:layout_height="461dp"
+    android:layout_below="@id/circle2_sec"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="140dp"
+    android:layout_marginEnd="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@id/risposte_domanda_2"
+        android:orientation="vertical" >
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lattosio"
+            android:checked="false"
+            android:background="@drawable/button_shape"
+            android:layout_margin="5dp"
+            android:textOn="@string/lattosio"
+            android:textOff="@string/lattosio"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+
+            />
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/celiachia"
+            android:checked="false"
+            android:background="@drawable/button_shape"
+            android:layout_margin="5dp"
+            android:textOn="@string/celiachia"
+            android:textOff="@string/celiachia"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vaiadomanda3"
+            android:background="@drawable/button_prosegui"
+            android:layout_marginTop="260dp"
+            android:text="@string/prosegui"
+            android:enabled="false"
+            />
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

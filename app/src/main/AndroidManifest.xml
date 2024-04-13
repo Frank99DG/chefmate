@@ -16,7 +16,24 @@
             android:name=".prova"
             android:exported="false" />
         <activity
+            android:name=".TerzoQuestionario"
+            android:exported="false" />
+        <activity
+            android:name=".SecondoQuestionario"
+            android:exported="false" />
+        <activity
             android:name=".PrimoQuestionario"
+            android:exported="true">
+
+            <!-- This activity is the main entry, should appear in app launcher -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PrimoQuestionarioVecchio"
             android:exported="false" />
         <activity
             android:name=".PrimaVoltaApp"

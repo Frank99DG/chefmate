@@ -2,9 +2,16 @@
     <string name="app_name">ChefMate</string>
     <string name="frase_motivazionale_da_inserire">Frase motivazionale da inserire</string>
     <string name="hai_una_o_pi_patologie_o_condizioni_patologiche_particolari">Hai una o più patologie o condizioni patologiche particolari?</string>
-    <string name="diabete">Diabete</string>
+    <string name="diabete">DIABETE</string>
     <string name="prosegui">PROSEGUI</string>
     <string name="circle1">1</string>
     <string name="circle2">2</string>
     <string name="circle3">3</string>
+    <string name="intolleranze">Hai intolleranze?</string>
+    <string name="lattosio">LATTOSIO</string>
+    <string name="celiachia">CELIACHIA</string>
+    <string name="allergie">Sei allergico a degli alimenti?</string>
+    <string name="fruttasecca">FRUTTA SECCA</string>
+    <string name="uova">UOVA</string>
+    <string name="patorenali">PATOLOGIE RENALI</string>
 </resources>

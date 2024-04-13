@@ -2,64 +2,161 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_app"
-    android:padding="30dp"
+    android:id="@+id/prova"
+    android:background="@color/white"
     tools:context=".PrimoQuestionario">
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dacapire"
-        android:text="@string/hai_una_o_pi_patologie_o_condizioni_patologiche_particolari"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:fontFamily="serif"
-        android:textStyle="bold"
-        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/domanda1"
-        android:text="@string/hai_una_o_pi_patologie_o_condizioni_patologiche_particolari"
-        android:layout_centerHorizontal="true"
-        android:textSize="22sp"
-        android:fontFamily="serif"
-        android:textStyle="bold"
-        android:layout_margin="20dp"
-        android:textAlignment="center"
-        android:layout_above="@id/risposte_domanda_1"
-        />
     <LinearLayout
         android:layout_width="match_parent"
+        android:id="@+id/rel_circle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="111dp"
+        android:orientation="horizontal"
+        android:background="@color/background_app">
+
+    <!-- Cerchio 1 -->
+    <Button
+        android:id="@+id/circle1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/circle1"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/circle2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/circle2"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- Cerchio 3 -->
+    <Button
+        android:id="@+id/circle3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circle_background"
+        android:gravity="center"
+        android:text="@string/circle3"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/domanda1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/rel_circle"
+        android:layout_margin="20dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="serif"
+        android:text="@string/hai_una_o_pi_patologie_o_condizioni_patologiche_particolari"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <ScrollView
         android:id="@+id/risposte_domanda_1"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
-        <Button
+        android:layout_width="380dp"
+        android:layout_height="661dp"
+        android:layout_marginStart="9dp"
+        android:layout_below="@id/rel_circle"
+        android:layout_marginTop="141dp">
+
+        <LinearLayout
+            android:id="@id/risposte_domanda_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/diabete"
-            android:background="@drawable/button_shape"
-            android:layout_margin="5dp"
-            android:text="@string/diabete"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/black"
-            />
-    </LinearLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/vaiadomanda2"
-        android:background="@drawable/button_shape"
-        android:layout_below="@id/risposte_domanda_1"
-        android:layout_marginTop="260dp"
-        android:text="@string/prosegui"
-       />
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/diabete"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="17.5dp"
+                    android:layout_marginEnd="17.5dp"
+                    android:background="@drawable/button_shape"
+                    android:checked="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black"
+                    android:textOff="@string/diabete"
+                    android:textOn="@string/diabete" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="13dp"
+                    android:elevation="8dp"
+                    android:src="@drawable/ic_blood" />
+
+            </FrameLayout>
 
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ToggleButton
+                    android:id="@+id/patorenali"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="17.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="17.5dp"
+                    android:background="@drawable/button_shape"
+                    android:checked="false"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black"
+                    android:textOff="@string/patorenali"
+                    android:textOn="@string/patorenali" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="25dp"
+                    android:elevation="8dp"
+                    android:src="@drawable/ic_kidney" />
+            </FrameLayout>
+
+
+            <Button
+                android:id="@+id/vaiadomanda2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="260dp"
+                android:layout_marginEnd="17.5dp"
+                android:background="@drawable/button_prosegui"
+                android:enabled="false"
+                android:text="@string/prosegui"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

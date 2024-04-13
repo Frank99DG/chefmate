@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:padding="30dp"
+    tools:context=".PrimoQuestionarioVecchio">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dacapire"
+        android:text="@string/hai_una_o_pi_patologie_o_condizioni_patologiche_particolari"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/domanda1"
+        android:text="@string/hai_una_o_pi_patologie_o_condizioni_patologiche_particolari"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:layout_above="@id/risposte_domanda_1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/risposte_domanda_1"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/diabete"
+            android:background="@drawable/button_shape"
+            android:layout_margin="5dp"
+            android:text="@string/diabete"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vaiadomanda2"
+        android:background="@drawable/button_shape"
+        android:layout_below="@id/risposte_domanda_1"
+        android:layout_marginTop="260dp"
+        android:text="@string/prosegui"
+       />
+
+
+
+</RelativeLayout>
